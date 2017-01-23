@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Tic Fuck Toe</string>
+    <string name="player">_player</string>
+    
+    <string name="dialog_reset">Reset game?</string>
+    <string name="dialog_change_bot">Change _player to Bot?</string>
+    <string name="dialog_take_control">Surrender, nub?</string>
+    <string name="dialog_draw">It\'s a draw!</string>
+    <string name="dialog_bot_wins">You lose, bitch!</string>
+    <string name="dialog_o_wins">O wins!</string>
+    <string name="dialog_x_wins">X wins!</string>
+    
+    <string name="positive_reset">Reset</string>
+    <string name="positive_change_bot">Change</string>
+    <string name="positive_take_control">Take Control</string>
+    <string name="positive_game_over">Next Game</string>
+    
+    <string name="negative_button">Cancel</string>
+    <string name="negative_game_over">Review</string>
+    
+    <string-array name="moves_o">
+        <item>,0</item>
+        <item>01,4</item>
+        <item>0148,6</item>
+        <item>02,6</item>
+        <item>0263,8</item>
+        <item>03,4</item>
+        <item>0348,2</item>
+        <item>04,8</item>
+        <item>048536,2</item>
+        <item>05,4</item>
+        <item>06,2</item>
+        <item>0621,8</item>
+        <item>07,4</item>
+        <item>0748,6</item>
+        <item>08,2</item>
+        <item>0821,6</item>
+    </string-array>
+    
+    <string-array name="moves_x">
+        <item>0,4</item>
+        <item>04217,3</item>
+        <item>045,8</item>
+        <item>04635,1</item>
+        <item>047,8</item>
+        <item>04785,2</item>
+        <item>048,7</item>
+        <item>1,4</item>
+        <item>143,0</item>
+        <item>14308,2</item>
+        <item>145,2</item>
+        <item>14526,0</item>
+        <item>146,2</item>
+        <item>14625,8</item>
+        <item>14627,8</item>
+        <item>147,5</item>
+        <item>14753,8</item>
+        <item>148,0</item>
+        <item>14803,6</item>
+        <item>2,4</item>
+        <item>24017,5</item>
+        <item>24108,5</item>
+        <item>243,6</item>
+        <item>24367,8</item>
+        <item>246,3</item>
+        <item>247,6</item>
+        <item>24763,0</item>
+        <item>3,4</item>
+        <item>341,0</item>
+        <item>34108,6</item>
+        <item>342,6</item>
+        <item>34267,8</item>
+        <item>34268,5</item>
+        <item>345,1</item>
+        <item>34517,2</item>
+        <item>347,6</item>
+        <item>34762,0</item>
+        <item>348,0</item>
+        <item>34801,2</item>
+        <item>4,0</item>
+        <item>40178,6</item>
+        <item>40352,6</item>
+        <item>40358,2</item>
+        <item>408,6</item>
+        <item>5,4</item>
+        <item>540,8</item>
+        <item>54087,6</item>
+        <item>541,2</item>
+        <item>54126,8</item>
+        <item>543,7</item>
+        <item>54371,6</item>
+        <item>546,2</item>
+        <item>54621,0</item>
+        <item>547,8</item>
+        <item>54780,2</item>
+        <item>6,4</item>
+        <item>64035,7</item>
+        <item>641,2</item>
+        <item>64125,8</item>
+        <item>642,5</item>
+        <item>645,2</item>
+        <item>64521,0</item>
+        <item>64871,3</item>
+        <item>7,4</item>
+        <item>740,8</item>
+        <item>74085,2</item>
+        <item>741,3</item>
+        <item>74135,0</item>
+        <item>742,6</item>
+        <item>74263,0</item>
+        <item>743,6</item>
+        <item>74362,8</item>
+        <item>745,8</item>
+        <item>74580,6</item>
+        <item>8,4</item>
+        <item>840,1</item>
+        <item>841,0</item>
+        <item>84103,6</item>
+        <item>84253,7</item>
+        <item>843,0</item>
+        <item>84301,2</item>
+        <item>84671,5</item>
+    </string-array>
+</resources>

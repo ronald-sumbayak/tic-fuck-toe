@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eee"
+        >
+        
+        <LinearLayout
+            android:id="@+id/players_state"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            >
+            
+            <View
+                android:id="@+id/state_o"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                />
+            
+            <View
+                android:id="@+id/state_x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/players_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            >
+            
+            <View
+                android:id="@+id/selection_o"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                />
+            
+            <View
+                android:id="@+id/selection_x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                />
+            
+        </LinearLayout>
+        
+        <ImageView
+            android:id="@+id/cc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="35dp"
+            android:minHeight="32dp"
+            android:minWidth="32dp"
+            android:src="@drawable/o"
+            />
+            
+        <TextView
+            android:id="@+id/point_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cc"
+            android:text="0"
+            android:textSize="32sp"
+            />
+        
+        <ImageButton
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:src="@drawable/reset"
+            />
+        
+        <ImageView
+            android:id="@+id/vv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="35dp"
+            android:minHeight="32dp"
+            android:minWidth="32dp"
+            android:src="@drawable/x"
+            />
+        
+        <TextView
+            android:id="@+id/point_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/vv"
+            android:text="0"
+            android:textSize="32sp"
+            />
+        
+    </RelativeLayout>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/panel"
+        android:background="#fff"
+        />
+    
+    <View
+        android:id="@+id/end_game_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
