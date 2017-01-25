@@ -17,8 +17,7 @@ class Controller {
     
     private final Context context;
     private final TextView tvPoint;
-    private final View selection;
-    private final View state;
+    private final View selection, state;
     private int point = 0;
     private boolean control = false;
     private Controller opponent;
