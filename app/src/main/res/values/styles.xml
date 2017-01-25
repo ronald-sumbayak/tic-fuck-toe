@@ -4,9 +4,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    
     <style name="ResetButton" parent="Theme.AppCompat.Light">
-        <item name="colorControlHighlight">#000</item>
-        <item name="colorButtonNormal">#a1887f</item>
+        <item name="colorControlHighlight">@color/semi_transparent_black</item>
+        <item name="colorButtonNormal">@color/brown_500</item>
     </style>
 </resources>

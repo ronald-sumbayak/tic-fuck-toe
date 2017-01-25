@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 
 class BoardAdapter extends RecyclerView.Adapter<BoardViewHolder> {
     
-    private MainActivity context;
-    private int height;
+    private final MainActivity context;
+    private final int height;
     
     BoardAdapter (MainActivity context, int height) {
         this.context = context;

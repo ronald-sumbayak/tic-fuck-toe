@@ -98,9 +98,9 @@ class Bot {
     }
     
     private static int random (int[][] states) {
-        List<Integer> candidates = new ArrayList<> ();
-        for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) if (states[i][j] < 0) candidates.add ((i*3)+j);
+        List<Integer> remains = new ArrayList<> ();
+        for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) if (states[i][j] < 0) remains.add ((i*3)+j);
         Random random = new Random ();
-        return candidates.get (random.nextInt (candidates.size ()));
+        return remains.get (random.nextInt (remains.size ()));
     }
 }

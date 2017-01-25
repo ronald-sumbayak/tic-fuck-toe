@@ -24,9 +24,7 @@ class TransparentProgressDialog {
         dialog.getWindow ().setBackgroundDrawable (new ColorDrawable (Color.TRANSPARENT));
         
         ProgressBar bar = new ProgressBar (context, null, android.R.attr.progressBarStyle);
-        bar.getIndeterminateDrawable ().setColorFilter (
-            ContextCompat.getColor (context, R.color.colorAccent), PorterDuff.Mode.MULTIPLY
-        );
+        bar.getIndeterminateDrawable ().setColorFilter (ContextCompat.getColor (context, R.color.teal), PorterDuff.Mode.MULTIPLY);
         dialog.getWindow ().setContentView (bar);
     }
     

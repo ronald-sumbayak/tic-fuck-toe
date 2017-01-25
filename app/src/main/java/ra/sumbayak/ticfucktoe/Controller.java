@@ -16,11 +16,12 @@ class Controller {
     private static final int[] states = {R.id.state_o, R.id.state_x};
     
     private Controller opponent;
-    private Context context;
+    private final Context context;
     private boolean control = false;
     private int point = 0;
-    private TextView tvPoint;
-    private View selection, state;
+    private final TextView tvPoint;
+    private final View selection;
+    private final View state;
     
     Controller (final MainActivity context, final int player) {
         this.context = context;
@@ -51,20 +52,16 @@ class Controller {
         control = true;
         TransitionManager.beginDelayedTransition ((ViewGroup) state.getParent ());
         state.setBackground (ContextCompat.getDrawable (context, android.R.color.holo_green_light));
-        selection.setClickable (!(control && !opponent.isControlled ()));
-        if (opponent.isControlled ()) opponent.setChangeable (!(opponent.isControlled () && !control));
+        selection.setClickable (!(control && !opponent.control));
+        opponent.selection.setClickable (!(opponent.control && !control));
     }
     
     private void changeToBot () {
         control = false;
         TransitionManager.beginDelayedTransition ((ViewGroup) state.getParent ());
         state.setBackground (ContextCompat.getDrawable (context, android.R.color.transparent));
-        selection.setClickable (!(control && !opponent.isControlled ()));
-        if (opponent.isControlled ()) opponent.setChangeable (!(opponent.isControlled () && !control));
-    }
-    
-    private void setChangeable (boolean changeable) {
-        selection.setClickable (changeable);
+        selection.setClickable (!(control && !opponent.control));
+        opponent.selection.setClickable (!(opponent.control && !control));
     }
     
     void win () {

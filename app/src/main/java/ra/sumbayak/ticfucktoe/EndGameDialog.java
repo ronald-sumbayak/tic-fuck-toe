@@ -8,10 +8,10 @@ class EndGameDialog {
     
     private static AlertDialog dialog;
     
-    static void create (Context context, int winner, boolean controlO, boolean controlX, final Runnable onPositiveButtonClick, final Runnable onNegativeButtonClick) {
+    static void create (Context context, int winner, boolean o, boolean x, final Runnable onPositiveButtonClick, final Runnable onNegativeButtonClick) {
         if (dialog != null) dialog.cancel ();
         AlertDialog.Builder builder = new AlertDialog.Builder (context);
-        builder.setMessage (title (context, winner, controlO, controlX));
+        builder.setMessage (title (context, winner, o, x));
         builder.setCancelable (false);
         builder.setPositiveButton (context.getString (R.string.positive_game_over), new DialogInterface.OnClickListener () {
             @Override

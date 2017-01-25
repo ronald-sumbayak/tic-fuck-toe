@@ -14,8 +14,8 @@ import com.transitionseverywhere.TransitionManager;
 
 class BoardViewHolder extends RecyclerView.ViewHolder {
     
-    private ImageView ic;
-    private RelativeLayout bg;
+    private final ImageView ic;
+    private final RelativeLayout bg;
     
     BoardViewHolder (View itemView, int height) {
         super (itemView);
@@ -53,7 +53,8 @@ class BoardViewHolder extends RecyclerView.ViewHolder {
     }
     
     private void resizeItem (int height) {
-        bg.getLayoutParams ().height = height / 3;
-        if (getLayoutPosition () > 5 && height/3 > 0) bg.getLayoutParams ().height += height % (height / 3);
+        int newHeight = height / 3;
+        if (getLayoutPosition () > 5) newHeight += height % (height / 3);
+        bg.getLayoutParams ().height = newHeight;
     }
 }

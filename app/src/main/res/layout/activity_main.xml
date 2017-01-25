@@ -10,6 +10,8 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         />
     
     <include
@@ -26,7 +28,7 @@
         android:layout_height="match_parent"
         android:layout_above="@id/panel"
         android:layout_below="@id/toolbar"
-        android:background="#fff"
+        android:background="@android:color/white"
         />
     
     <View
@@ -37,5 +39,4 @@
         android:visibility="gone"
         />
     
-
 </RelativeLayout>

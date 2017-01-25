@@ -63,6 +63,8 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_margin="32dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/o"
         tools:ignore="ContentDescription,RtlHardcoded"
         />
@@ -97,6 +99,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_margin="32dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/x"
         tools:ignore="ContentDescription,RtlHardcoded"
         />

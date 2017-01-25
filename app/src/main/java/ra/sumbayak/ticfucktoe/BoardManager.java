@@ -7,8 +7,8 @@ import android.view.ViewTreeObserver;
 
 class BoardManager {
     
-    private int[][] states = new int[3][3];
-    private MainActivity context;
+    private final int[][] states = new int[3][3];
+    private final MainActivity context;
     private RecyclerView board;
     private BoardAdapter adapter;
     

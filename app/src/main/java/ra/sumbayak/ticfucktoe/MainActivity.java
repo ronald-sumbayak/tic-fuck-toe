@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     
-    void resetGame () {
+    private void resetGame () {
         o.reset ();
         x.reset ();
         resetBoard ();
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         else if (!((turn % 2 == 0 && o.isControlled ()) || (turn % 2 != 0 && x.isControlled ()))) botMove ();
     }
     
-    public void botMove () {
+    private void botMove () {
         TransparentProgressDialog.create (this);
         Handler handler = new Handler ();
         handler.postDelayed (new Runnable () {
@@ -173,8 +173,7 @@ public class MainActivity extends AppCompatActivity {
     }
     
     @Override
-    public void onBackPressed () {
-        SimpleDialog.create (
+    public void onBackPressed () {SimpleDialog.create (
             this,
             getString (R.string.dialog_exit),
             getString (R.string.positive_exit),
