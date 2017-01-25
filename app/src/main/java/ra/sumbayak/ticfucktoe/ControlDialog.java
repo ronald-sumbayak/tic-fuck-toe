@@ -2,7 +2,7 @@ package ra.sumbayak.ticfucktoe;
 
 import android.content.Context;
 
-abstract class ControlDialog {
+class ControlDialog {
     
     static void create (Context context, String player, boolean state, Runnable onPositiveButtonClick) {
         SimpleDialog.create (

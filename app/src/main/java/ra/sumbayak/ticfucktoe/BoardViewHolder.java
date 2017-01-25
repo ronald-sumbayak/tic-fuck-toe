@@ -1,5 +1,7 @@
 package ra.sumbayak.ticfucktoe;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
@@ -12,43 +14,46 @@ import com.transitionseverywhere.TransitionManager;
 
 class BoardViewHolder extends RecyclerView.ViewHolder {
     
-    private RelativeLayout bg;
     private ImageView ic;
+    private RelativeLayout bg;
     
-    BoardViewHolder (View itemView) {
+    BoardViewHolder (View itemView, int height) {
         super (itemView);
+        ic = (ImageView) itemView.findViewById (R.id.ic);
         bg = (RelativeLayout) itemView.findViewById (R.id.background);
-        ic = (ImageView) itemView.findViewById (R.id.item);
+        resizeItem (height);
     }
     
-    void bind (final MainActivity context, final int position, int height) {
-        int drawable = -1, state = context.states[position/3][position%3];
-        if (state < 0) drawable = R.drawable.space;
-        else if (state == 0) drawable = R.drawable.o;
-        else if (state == 1) drawable = R.drawable.x;
-        TransitionManager.beginDelayedTransition ((ViewGroup) itemView);
-        ic.setImageDrawable (ContextCompat.getDrawable (context, drawable));
+    void bind (final MainActivity context) {
+        int state = context.state (getLayoutPosition ());
+        ic.setImageDrawable (ContextCompat.getDrawable (context, icon (state)));
         
+        bg.setOnClickListener (state < 0 ? new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                context.assign (getLayoutPosition ());
+            }
+        } : null);
+    
+        bg.setBackground (state < 0 ? selectableItemBackground (context) : null);
+        bg.setClickable (state < 0);
+    }
+    
+    private int icon (int state) {
+        if (state == 0) return R.drawable.o;
+        else if (state == 1) return R.drawable.x;
+        else return R.drawable.space;
+    }
+    
+    private Drawable selectableItemBackground (Context context) {
+        TypedValue outValue = new TypedValue ();
+        context.getTheme().resolveAttribute (android.R.attr.selectableItemBackground, outValue, true);
+        TransitionManager.beginDelayedTransition ((ViewGroup) itemView);
+        return ContextCompat.getDrawable (context, outValue.resourceId);
+    }
+    
+    private void resizeItem (int height) {
         bg.getLayoutParams ().height = height / 3;
-        if (position > 5 && height / 3 > 0) bg.getLayoutParams ().height += height % (height / 3);
-        if (state < 0) {
-            TypedValue outValue = new TypedValue ();
-            context.getTheme().resolveAttribute (android.R.attr.selectableItemBackground, outValue, true);
-            TransitionManager.beginDelayedTransition ((ViewGroup) itemView);
-            bg.setBackground (ContextCompat.getDrawable (context, outValue.resourceId));
-            bg.setClickable (true);
-            bg.setOnClickListener (new View.OnClickListener () {
-                @Override
-                public void onClick (View view) {
-                    context.assign (position);
-                    bg.setClickable (false);
-                }
-            });
-        }
-        else {
-            TransitionManager.beginDelayedTransition ((ViewGroup) itemView);
-            bg.setBackground (null);
-            bg.setClickable (false);
-        }
+        if (getLayoutPosition () > 5 && height/3 > 0) bg.getLayoutParams ().height += height % (height / 3);
     }
 }

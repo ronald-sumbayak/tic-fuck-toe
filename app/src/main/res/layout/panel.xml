@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eceff1"
+    >
+        
+    <LinearLayout
+        android:id="@+id/players_state"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        >
+        
+        <View
+            android:id="@+id/state_o"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        
+        <View
+            android:id="@+id/state_x"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/players_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        >
+        
+        <View
+            android:id="@+id/selection_o"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            />
+        
+        <View
+            android:id="@+id/selection_x"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            />
+        
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/ic_o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="32dp"
+        android:minHeight="32dp"
+        android:minWidth="32dp"
+        android:src="@drawable/o"
+        tools:ignore="ContentDescription,RtlHardcoded"
+        />
+        
+    <TextView
+        android:id="@+id/point_o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ic_o"
+        android:text="0"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        />
+    
+    <ImageButton
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="64dp"
+        android:minWidth="64dp"
+        android:src="@drawable/reset"
+        android:theme="@style/ResetButton"
+        tools:ignore="ContentDescription,HardcodedText"
+        />
+    
+    <ImageView
+        android:id="@+id/ic_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="32dp"
+        android:minHeight="32dp"
+        android:minWidth="32dp"
+        android:src="@drawable/x"
+        tools:ignore="ContentDescription,RtlHardcoded"
+        />
+    
+    <TextView
+        android:id="@+id/point_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/ic_x"
+        android:text="0"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        />
+    
+</RelativeLayout>

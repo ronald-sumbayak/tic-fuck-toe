@@ -10,30 +10,25 @@ class BoardAdapter extends RecyclerView.Adapter<BoardViewHolder> {
     private MainActivity context;
     private int height;
     
-    BoardAdapter (MainActivity context) {
+    BoardAdapter (MainActivity context, int height) {
         this.context = context;
-        height = 0;
+        this.height = height;
     }
     
     @Override
     public BoardViewHolder onCreateViewHolder (ViewGroup parent, int viewType) {
         View itemView;
         itemView = LayoutInflater.from (context).inflate (R.layout.itemview_board, parent, false);
-        return new BoardViewHolder (itemView);
+        return new BoardViewHolder (itemView, height);
     }
     
     @Override
     public void onBindViewHolder (BoardViewHolder holder, int position) {
-        holder.bind (context, position, height);
+        holder.bind (context);
     }
     
     @Override
     public int getItemCount () {
         return 9;
-    }
-    
-    void resizeBoard (int height) {
-        this.height = height - 1;
-        notifyDataSetChanged ();
     }
 }

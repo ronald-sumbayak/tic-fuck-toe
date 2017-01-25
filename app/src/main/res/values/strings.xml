@@ -2,20 +2,23 @@
     <string name="app_name">Tic Fuck Toe</string>
     <string name="player">_player</string>
     
+    <string name="dialog_exit">Tired?</string>
     <string name="dialog_reset">Reset game?</string>
-    <string name="dialog_change_bot">Change _player to Bot?</string>
+    <string name="dialog_change_bot">Are you sure?</string>
     <string name="dialog_take_control">Surrender, nub?</string>
     <string name="dialog_draw">It\'s a draw!</string>
     <string name="dialog_bot_wins">You lose, bitch!</string>
     <string name="dialog_o_wins">O wins!</string>
     <string name="dialog_x_wins">X wins!</string>
     
+    <string name="positive_exit">Yeah</string>
     <string name="positive_reset">Reset</string>
-    <string name="positive_change_bot">Change</string>
-    <string name="positive_take_control">Take Control</string>
+    <string name="positive_change_bot">Bring it on!</string>
+    <string name="positive_take_control">Yea</string>
     <string name="positive_game_over">Next Game</string>
     
-    <string name="negative_button">Cancel</string>
+    <string name="negative_default">No</string>
+    <string name="negative_exit">Nope</string>
     <string name="negative_game_over">Review</string>
     
     <string-array name="moves_o">
