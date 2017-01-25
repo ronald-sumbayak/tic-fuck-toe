@@ -15,13 +15,13 @@ class Controller {
     private static final int[] selections = {R.id.selection_o, R.id.selection_x};
     private static final int[] states = {R.id.state_o, R.id.state_x};
     
-    private Controller opponent;
     private final Context context;
-    private boolean control = false;
-    private int point = 0;
     private final TextView tvPoint;
     private final View selection;
     private final View state;
+    private int point = 0;
+    private boolean control = false;
+    private Controller opponent;
     
     Controller (final MainActivity context, final int player) {
         this.context = context;
